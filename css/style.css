@@ -961,6 +961,9 @@ li.search_icon {
     margin: 90px 0px;
 }
 
-
+.divs {
+    position: relative;
+    left: 40px;
+}
 
 
