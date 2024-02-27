@@ -199,21 +199,26 @@
     function Send() {
       Email.send({
 
-        Host: "smtp.elasticemail.com",
-        Username: "",
-        Password: "",
-        To: '',
-        From: "",
+        SecureToken: "358dde98-5d21-46ab-82e6-ae0f1c2337e3",
+        To: 'kidskingdombhandara@gmail.com',
+        From: "sagar.bawanthade30@gmail.com",
         Subject: "New Contact-Form Enquiry",
         Body: "Name: " + document.getElementById("name").value
           + "<br>  Email " + document.getElementById("email").value
           + "<br>  Phone no. " + document.getElementById("phonenumber").value
           + "<br>  Message " + document.getElementById("message").value
       }).then(
-        message => alert(message)
+        message => {
+          if (message == "OK") {
+            alert("Your data has been successfully received");
+          } else {
+            alert("Something went wrong!");
+          }
+        }
       );
 
     }
+
   </script>
 </body>
 
